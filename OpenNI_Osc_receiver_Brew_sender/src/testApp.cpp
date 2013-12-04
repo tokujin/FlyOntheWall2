@@ -5,47 +5,12 @@ void testApp::setup(){
     ofBackground(255);
     ofEnableAlphaBlending();
     mReceiver.setup(12345);
-    
-    //main program related
-    for (int i = 0; i < 25; i++){
-        ofVec2f pos = ofVec2f(ofGetWidth()/2,ofGetHeight()/4 + i * 10);
-        pointsOnLine.push_back(pos);
-    }
-    
-    hold = false;
-
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
     checkOsc();
-    centerHand = (leftHand + rightHand)/2;
-    
-    float squareDistance = ((rightHand - leftHand).x*(rightHand - leftHand).x + (rightHand - leftHand).y*(rightHand - leftHand).y);
-    
-    
-    if (squareDistance < 100*100 && squareDistance > 50*50) {
-        hold = true;
-    }else{
-        hold = false;
-    }
-    
-    for (int i=0; i<pointsOnLine.size()-1 ; i++) {
-        float sqdist = (centerHand - pointsOnLine[i]).x*(centerHand - pointsOnLine[i]).x+(centerHand - pointsOnLine[i]).y*(centerHand - pointsOnLine[i]).y;
-        if (sqdist < 10) {
-            //                pointsOnLine[i+1] = pointsOnLine[i];
-        }else{
-            ofSetColor(255);
-            for(int j=0; j<pointsOnLine.size()-1; j++){
-                ofLine(pointsOnLine[j],pointsOnLine[j+1]);
-            }
-        }
-    }
-
-    
 }
-
-
 
 //--------------------------------------------------------------
 void testApp::draw(){
@@ -77,30 +42,6 @@ void testApp::draw(){
     ofSetColor(255,0,150,200);
     ofCircle(rightHand.x, rightHand.y, 20);
 
-    
-    //ball
-//    if (hold) {
-//        ofSetColor(200, 100, 0, 200);
-//        ofCircle(centerHand, 28);
-//
-//    }
-    
-    //collision detection
-    for (int i=0; i<pointsOnLine.size()-1 ; i++) {
-//        float sqdist = (centerHand - pointsOnLine[i]).x*(centerHand - pointsOnLine[i]).x+(centerHand - pointsOnLine[i]).y*(centerHand - pointsOnLine[i]).y;
-//        if (sqdist < 10) {
-//            //                pointsOnLine[i+1] = pointsOnLine[i];
-//        }else{
-            ofSetColor(255);
-            for(int j=0; j<pointsOnLine.size()-1; j++){
-                ofLine(pointsOnLine[j],pointsOnLine[j+1]);
-//            }
-        }
-    }
-
-    
-    
-    
     ofPopMatrix();
     
 
