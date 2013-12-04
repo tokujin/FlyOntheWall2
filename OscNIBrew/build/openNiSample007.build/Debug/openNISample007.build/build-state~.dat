@@ -1,0 +1,52 @@
+TopenNISample007
+v7
+r1
+cCheck dependencies
+
+N/Applications/of_v0.8.0_osx_release/apps/myApps/OscNIBrew/../../../libs/glut/lib/osx/GLUT.framework
+c000000005208FC5A00000000000000CC
+t1376320602
+s204
+
+N/Applications/of_v0.8.0_osx_release/apps/myApps/OscNIBrew/bin//openNISample007Debug.app
+t1386043786
+s102
+
+N/Applications/of_v0.8.0_osx_release/apps/myApps/OscNIBrew/bin//openNISample007Debug.app/Contents/Info.plist
+t1386043786
+s1052
+
+N/Applications/of_v0.8.0_osx_release/apps/myApps/OscNIBrew/bin//openNISample007Debug.app/Contents/PkgInfo
+t1386043786
+s8
+
+N/Applications/of_v0.8.0_osx_release/apps/myApps/OscNIBrew/bin/openNISample007Debug.app/Contents/Frameworks/GLUT.framework
+t1386043786
+s204
+
+N/Applications/of_v0.8.0_osx_release/apps/myApps/OscNIBrew/build/openNiSample007.build/Debug/openNISample007.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
+c00000000000000000000000000000000
+t2
+s0
+
+NopenFrameworks-Info.plist
+c00000000529D598A0000000000000277
+t1386043786
+s631
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies407739667#407739667#0(65"[BEROR]error: There is no SDK with the name or path 'macosx10.8'1(4@57"error: There is no SDK with the name or path 'macosx10.8'407739667#18446744073709551615#0#0(1@0"0(0#1#0"8644640096#0"0#
+
+CPBXCp bin/openNISample007Debug.app/Contents/Frameworks/GLUT.framework ../../../libs/glut/lib/osx/GLUT.framework
+r0
+
+CPhaseScriptExecution "Run Script" /Applications/of_v0.8.0_osx_release/apps/myApps/OscNIBrew/build/openNiSample007.build/Debug/openNISample007.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
+r0
+
+CProcessInfoPlistFile /Applications/of_v0.8.0_osx_release/apps/myApps/OscNIBrew/bin//openNISample007Debug.app/Contents/Info.plist openFrameworks-Info.plist
+r0
+
+CTouch /Applications/of_v0.8.0_osx_release/apps/myApps/OscNIBrew/bin//openNISample007Debug.app
+r0
+

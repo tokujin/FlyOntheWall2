@@ -5,7 +5,6 @@
 #include "ofMain.h"
 #include "ofxOsc.h"
 
-
 class testApp : public ofBaseApp{
 
 public:
@@ -27,12 +26,17 @@ public:
 
     void userEvent(ofxOpenNIUserEvent & event);
     ofxOpenNI openNIDevice;
+    
     int numUsers;
+    
     ofTrueTypeFont verdana;
         
     ofVec2f leftHand;
     
+    void gotMessage(ofMessage msg);
+    
     ofxOscSender mSender;
+
 
 };
 

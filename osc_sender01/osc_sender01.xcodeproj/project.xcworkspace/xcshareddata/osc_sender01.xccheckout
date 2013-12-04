@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D1C7E09E-78D3-4F57-821E-9E81E37AD0DC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>osc_sender01</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>057D4177-73F5-4DC4-A320-B034ED887F11</key>
+		<string>https://github.com/hideyukisaito/ofxOsc.git</string>
+		<key>4408365D-62F7-41BC-8ED1-7CA8EEB343DB</key>
+		<string>https://github.com/tokujin/FlyOntheWall2.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>osc_sender01/osc_sender01.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>057D4177-73F5-4DC4-A320-B034ED887F11</key>
+		<string>../../../../../addons/ofxOsc</string>
+		<key>4408365D-62F7-41BC-8ED1-7CA8EEB343DB</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/tokujin/FlyOntheWall2.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4408365D-62F7-41BC-8ED1-7CA8EEB343DB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4408365D-62F7-41BC-8ED1-7CA8EEB343DB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FlyOntheWall2</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>057D4177-73F5-4DC4-A320-B034ED887F11</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxOsc</string>
+		</dict>
+	</array>
+</dict>
+</plist>

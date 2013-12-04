@@ -5,7 +5,7 @@ void testApp::setup(){
     ofSetFrameRate(60);
     ofSetVerticalSync(true);
     
-    mSender.setup("localhost", 12345); //149.31.196.84
+    mSender.setup("172.20.10.2", 12345); //149.31.196.84
     //"127.0.1.1" home
     
     
