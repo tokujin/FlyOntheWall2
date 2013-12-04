@@ -149,28 +149,7 @@ void testApp::draw(){
         //        openNIDevice.drawSkeletons(0, 0, ofGetWidth(), ofGetHeight());
         openNIDevice.drawSkeletons();
         
-//        squareDistance = ((rightHand - leftHand).x*(rightHand - leftHand).x + (rightHand - leftHand).y*(rightHand - leftHand).y);
-//        
-//        if (squareDistance < 100*100 && squareDistance > 40*40) {
-//            ofSetColor(200, 100, 0);
-//            ofCircle(centerHand, 20);
-//        }
-//        
-//        for (int i=0; i<pointsOnLine.size()-1 ; i++) {
-//            float sqdist = (centerHand - pointsOnLine[i]).x*(centerHand - pointsOnLine[i]).x+(centerHand - pointsOnLine[i]).y*(centerHand - pointsOnLine[i]).y;
-//            if (sqdist < 10) {
-//                //                pointsOnLine[i+1] = pointsOnLine[i];
-//            }else{
-//                ofSetColor(255);
-//                for(int j=0; j<pointsOnLine.size()-1; j++){
-//                    ofLine(pointsOnLine[j],pointsOnLine[j+1]);
-//                }
-//            }
-//        }
-        
         ofPopMatrix();
-        
-        // openNIDevice.drawImage(0, 0, ofGetWidth(), ofGetHeight());
         
         // you can also access the pixel and texture references individually:
         
