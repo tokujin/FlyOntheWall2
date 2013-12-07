@@ -22,6 +22,11 @@ void Vibration::set(){
     }
     NumPoints = 40;
     
+    particleImage.loadImage("particle32.png");
+    
+    particleImage1.loadImage("particle32.png");
+
+    
 }
 
 //--------------------------------------------------------------
@@ -74,23 +79,36 @@ void Vibration::draw(){
     
     ofCircle(c, 20);
     
-    ofPushMatrix();
-    ofTranslate(a);
+    //ofPushMatrix();
+    //ofTranslate(ofPoint(100,100));
     ofVec2f q=ofVec2f(1,0);
     float angle=q.angle(b-a);
     ofRotateZ(angle);
     
     for (int i = 0; i < pointsOnString.size(); i++){
-        //        ofLine(pointsOnString[i], pointsOnString[i+1]);
+                //ofLine(pointsOnString[i], pointsOnString[i+1]);
         pointsOnString[NumPoints] = ofVec2f(L, 0);
-        //        ofCircle(pointsOnString[i], 10);
-        //        ofCircle(pointsOnString[NumPoints], 2);
+                //ofCircle(pointsOnString[i], 10);
+                //ofCircle(pointsOnString[NumPoints], 2);
         particleImage.draw(pointsOnString[i].x -16, pointsOnString[i].y -16);
+ 
     }
     
-    ofPopMatrix();
+//    for(int i=0;i<10;i++){
+//        int rx = ofRandom(0,ofGetWidth());
+//        int ry = ofRandom(0,ofGetHeight());
+//        particleImage.draw(rx,ry);
+//    
+//    }
+
+    particleImage.draw(100 -16, 100 -16);
     
+    //ofPopMatrix();
     
+//    for(int i=0;i<10;i++){
+//        int rx = ofRandom(0,ofGetWidth());
+//        int ry = ofRandom(0,ofGetHeight());
+//        particleImage.draw(rx,ry);    }
     
 }
 
