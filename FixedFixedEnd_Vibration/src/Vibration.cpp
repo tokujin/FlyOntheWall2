@@ -9,6 +9,7 @@
 #include "Vibration.h"
 //--------------------------------------------------------------
 Vibration::Vibration(){
+
 }
 
 void Vibration::set(){
@@ -16,45 +17,52 @@ void Vibration::set(){
     decay=1;
     n = 1;
     
-    for (int i = 0; i < NumPoints; i++){
+    for (int i=0; i<NumPoints; i++){
         ofVec2f pos = ofVec2f((b-a).x/NumPoints*i,(b-a).y/NumPoints*i);
         pointsOnString.push_back(pos);
     }
-    NumPoints = 40;
-
+    
+    NumPoints=40;
     
 }
 
 //--------------------------------------------------------------
 void Vibration::update(){
-    L = ofDist(a.x, a.y, b.x, b.y);
+    
+    L=ofDist(a.x, a.y, b.x, b.y);  //Distance between point a and b
     
     ofPushMatrix();
-    ofTranslate(a);
-    decay *= 0.97;
-    ofVec2f q=ofVec2f(1,0);
-    float angle=q.angle(b-a);
-    ofRotateZ(angle);
+    ofTranslate(a);  //transrate x,y-coordinate to point a
+    decay *= 0.97;  //decay magnitude
+    ofVec2f q=ofVec2f(1,0);  //normal vector
+    float angle=q.angle(b-a);  //get angle of q and (b-a)
+    ofRotateZ(angle);  //rotate x,y-coordinate(around z-axis)
     
     for (int i = 1; i < pointsOnString.size(); i++){
         pointsOnString[i].x = L/NumPoints*i;
-        pointsOnString[i].y = A*sin(n*PI/L*i*L/NumPoints)*cos(TWO_PI*20/2/L*ofGetElapsedTimef()*800) * decay;
+        pointsOnString[i].y = A*sin(n*PI/L*i*L/NumPoints + sigma)*cos(TWO_PI*20/2/L*ofGetElapsedTimef()*250) * decay;  //A: magnitude, n: oscillation more, sigma: phase, when phase=0 standing wave
     }
     
-    if (minimum_distance_Squared(a, b, c) < 5*5){
-        if ((c-a).dot(c-a) < L*L/(3*3)) {
-            n=3;
+    if (minimum_distance_Squared(a, b, c) < 5*5){  //squared of minimum distance
+        if ((c-a).dot(c-a) < L*L/(3*3)) {  //when collision point is near to a
+            n = 3;
+            A = 30;
             decay = 1;
+            sigma = PI/2;
         }
-        if ((c-a).dot(c-a) > L*L/(3*3) && (c-a).dot(c-a) < L*L*4/9) {
-            n=1;
+        if ((c-a).dot(c-a) > L*L/(3*3) && (c-a).dot(c-a) < L*L*4/9) { //when collision point is in the middle of a and b
+            n = 1;
+            A = 70;
             decay = 1;
+            sigma = 0;
         }
-        if( ((c-a).dot(c-a) >  L*L*4/9)){
-            n=3;
-            decay=1;
+        if( ((c-a).dot(c-a) >  L*L*4/9)){  //when collision point is near to b
+            n = 3;
+            A = 30;
+            decay = 1;
+            sigma = PI/2;
+            
         }
-        
     }
     ofPopMatrix();
 }
@@ -63,11 +71,11 @@ void Vibration::update(){
 void Vibration::draw(){
     
     ofSetColor(10, 20, 80);
-    ofCircle(a, 10);
+    ofCircle(a, 10);  //point a
     ofSetColor(255, 20, 80);
-    ofCircle(b, 10);
+    ofCircle(b, 10);  //point b
     ofSetColor(10, 20, 80);
-    
+
     ofPushMatrix();
     ofTranslate(a);
     ofVec2f q=ofVec2f(1,0);
@@ -77,12 +85,9 @@ void Vibration::draw(){
     for (int i = 0; i < pointsOnString.size(); i++){
         pointsOnString[NumPoints] = ofVec2f(L, 0);
         particleImage.draw(pointsOnString[i].x -16, pointsOnString[i].y -16);
-        ofCircle(pointsOnString[i], 2);
     }
     
     ofPopMatrix();
-    
-    
     
 }
 

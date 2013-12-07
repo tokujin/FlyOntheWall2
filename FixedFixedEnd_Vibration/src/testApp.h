@@ -24,8 +24,5 @@ class testApp : public ofBaseApp{
     
         Vibration myVibration;
         ofVec2f c;
-    
-        void addParticle();
-
-    
+        
 };
