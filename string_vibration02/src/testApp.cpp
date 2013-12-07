@@ -5,8 +5,7 @@ void testApp::setup(){
 
     ofSetVerticalSync(true);
     ofSetFrameRate(60);
-    ofSetFrameRate(60);
-    ofBackground(63);
+    ofBackground(100);
     ofEnableBlendMode(OF_BLENDMODE_ADD);
 
     //Load Image
@@ -24,14 +23,14 @@ void testApp::setup(){
     A = 70;
     decay=1;
     n = 1;
+    
+    soundPlay = false;
 
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-    
-//    a += ofVec2f(ofRandom(-2,2), ofRandom(-2,2));
-//    b += ofVec2f(ofRandom(-2,2), ofRandom(-2,2));
+
     L = ofDist(a.x, a.y, b.x, b.y);
     c = ofVec2f(mouseX, mouseY);
     
@@ -60,18 +59,9 @@ void testApp::update(){
             n=3;
             decay=1;
         }
-        
+        soundPlay = true;
     }
-    
-    cout << (c-a).dot(c-a) << endl;
-    cout << L*L << endl;
-
     ofPopMatrix();
-    
-//    cout << minimum_distance_Squared(a, b, c)<<endl;
-
-
-    
 }
 
 //--------------------------------------------------------------

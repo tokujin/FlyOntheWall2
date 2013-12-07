@@ -2,21 +2,29 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
+    
+    ofSetVerticalSync(true);
+    ofSetFrameRate(60);
+    ofBackground(100);
+    ofEnableBlendMode(OF_BLENDMODE_ADD);
+    
     myVibration.a = ofVec2f(ofGetWidth()/4, ofGetHeight()/4);
     myVibration.b = ofVec2f(ofGetWidth()*3/4, ofGetHeight()*3/4);
     myVibration.set();
-    myVibration.NumPoints = 50;
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
     c = ofVec2f(mouseX, mouseY);
+    myVibration.c;
     myVibration.update();
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
     myVibration.draw();
+    ofCircle(c, 20);
+
 }
 
 //--------------------------------------------------------------

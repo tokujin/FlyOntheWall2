@@ -28,7 +28,6 @@ class Vibration{
     
         //minumum distance
         float minimum_distance_Squared(ofVec2f v, ofVec2f w, ofVec2f p);
-
     
         ofImage particleImage,particleImage1;
 };
