@@ -21,6 +21,7 @@ void Vibration::set(){
         pointsOnString.push_back(pos);
     }
     NumPoints = 40;
+
     
 }
 
@@ -55,12 +56,7 @@ void Vibration::update(){
         }
         
     }
-    
-    cout << (c-a).dot(c-a) << endl;
-    cout << L*L << endl;
-    
     ofPopMatrix();
-
 }
 
 //--------------------------------------------------------------
@@ -72,8 +68,6 @@ void Vibration::draw(){
     ofCircle(b, 10);
     ofSetColor(10, 20, 80);
     
-    ofCircle(c, 20);
-    
     ofPushMatrix();
     ofTranslate(a);
     ofVec2f q=ofVec2f(1,0);
@@ -81,11 +75,9 @@ void Vibration::draw(){
     ofRotateZ(angle);
     
     for (int i = 0; i < pointsOnString.size(); i++){
-        //        ofLine(pointsOnString[i], pointsOnString[i+1]);
         pointsOnString[NumPoints] = ofVec2f(L, 0);
-        //        ofCircle(pointsOnString[i], 10);
-        //        ofCircle(pointsOnString[NumPoints], 2);
         particleImage.draw(pointsOnString[i].x -16, pointsOnString[i].y -16);
+        ofCircle(pointsOnString[i], 2);
     }
     
     ofPopMatrix();

@@ -32,4 +32,5 @@ class testApp : public ofBaseApp{
         int n; // viblation mode
     
         ofImage particleImage;
+        bool soundPlay;
 };
