@@ -11,17 +11,23 @@ void testApp::setup(){
     myVibration.a = ofVec2f(ofGetWidth()/4, ofGetHeight()/4);
     myVibration.b = ofVec2f(ofGetWidth()*3/4, ofGetHeight()*3/4);
     myVibration.set();
+
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
+    
     c = ofVec2f(mouseX, mouseY);
     myVibration.c;
     myVibration.update();
+    myVibration.decay;
+
+    cout << myVibration.decay <<endl;
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
+    
     myVibration.draw();
     ofCircle(c, 20);
 
