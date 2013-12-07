@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>41FB35F3-2860-4A66-8240-E75463010428</string>
+	<key>IDESourceControlProjectName</key>
+	<string>OpenNI_Osc_receiver_Brew_sender</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>057D4177-73F5-4DC4-A320-B034ED887F11</key>
+		<string>https://github.com/hideyukisaito/ofxOsc.git</string>
+		<key>4408365D-62F7-41BC-8ED1-7CA8EEB343DB</key>
+		<string>https://github.com/tokujin/FlyOntheWall2.git</string>
+		<key>A2CE098A-2790-4CDD-ACD1-B67932CC54C7</key>
+		<string>https://github.com/labatrockwell/ofxLibwebsockets.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>OpenNI_Osc_receiver_Brew_sender/OpenNI_Osc_receiver_Brew_sender.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>057D4177-73F5-4DC4-A320-B034ED887F11</key>
+		<string>../../../../../addons/ofxOsc</string>
+		<key>4408365D-62F7-41BC-8ED1-7CA8EEB343DB</key>
+		<string>../../..</string>
+		<key>A2CE098A-2790-4CDD-ACD1-B67932CC54C7</key>
+		<string>../../../../../addons/ofxLibwebsockets</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/tokujin/FlyOntheWall2.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4408365D-62F7-41BC-8ED1-7CA8EEB343DB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4408365D-62F7-41BC-8ED1-7CA8EEB343DB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FlyOntheWall2</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A2CE098A-2790-4CDD-ACD1-B67932CC54C7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxLibwebsockets</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>057D4177-73F5-4DC4-A320-B034ED887F11</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxOsc</string>
+		</dict>
+	</array>
+</dict>
+</plist>
