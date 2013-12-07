@@ -73,32 +73,32 @@ void Vibration::draw(){
     ofCircle(b, 10);
     ofSetColor(10, 20, 80);
     
-<<<<<<< HEAD
+
     ofCircle(c, 20);
     
     //ofPushMatrix();
     //ofTranslate(ofPoint(100,100));
-=======
+
     ofPushMatrix();
     ofTranslate(a);
->>>>>>> c514125d12962b093fb6a1e05fb3573195c205c5
+
     ofVec2f q=ofVec2f(1,0);
     float angle=q.angle(b-a);
     ofRotateZ(angle);
     
     for (int i = 0; i < pointsOnString.size(); i++){
-<<<<<<< HEAD
+
                 //ofLine(pointsOnString[i], pointsOnString[i+1]);
         pointsOnString[NumPoints] = ofVec2f(L, 0);
                 //ofCircle(pointsOnString[i], 10);
                 //ofCircle(pointsOnString[NumPoints], 2);
         particleImage.draw(pointsOnString[i].x -16, pointsOnString[i].y -16);
  
-=======
+
         pointsOnString[NumPoints] = ofVec2f(L, 0);
         particleImage.draw(pointsOnString[i].x -16, pointsOnString[i].y -16);
         ofCircle(pointsOnString[i], 2);
->>>>>>> c514125d12962b093fb6a1e05fb3573195c205c5
+
     }
     
 //    for(int i=0;i<10;i++){
