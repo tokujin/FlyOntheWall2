@@ -21,11 +21,10 @@ class Vibration{
         float L; //Distance
         float A; //magnitude
         deque<ofVec2f> pointsOnString;
-    
         int NumPoints;
         float decay;
         int n; // viblation mode
-        float sigma;
+    
     
         //minumum distance
         float minimum_distance_Squared(ofVec2f v, ofVec2f w, ofVec2f p);
