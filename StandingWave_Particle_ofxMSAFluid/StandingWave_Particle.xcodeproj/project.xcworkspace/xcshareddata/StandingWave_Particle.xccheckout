@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>497173EB-8047-420D-B2F9-AF9F1F414E33</string>
+	<key>IDESourceControlProjectName</key>
+	<string>StandingWave_Particle</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>89FDBEDD-526D-4078-9EB0-943AB979531C</key>
+		<string>https://github.com/tokujin/FlyOntheWall2.git</string>
+		<key>9CC6E195-D8FC-43DE-8484-A924748CD15A</key>
+		<string>https://github.com/tokujin/algo_yuki.git</string>
+		<key>E10AE829-E4F3-4DC4-A2A4-10602BBB042A</key>
+		<string>https://github.com/hideyukisaito/ofxOsc.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>StandingWave_Particle_ofxMSAFluid/StandingWave_Particle.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>89FDBEDD-526D-4078-9EB0-943AB979531C</key>
+		<string>../../..</string>
+		<key>9CC6E195-D8FC-43DE-8484-A924748CD15A</key>
+		<string>../../../../algo_yuki</string>
+		<key>E10AE829-E4F3-4DC4-A2A4-10602BBB042A</key>
+		<string>../../../../../addons/ofxOsc</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/tokujin/FlyOntheWall2.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>89FDBEDD-526D-4078-9EB0-943AB979531C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9CC6E195-D8FC-43DE-8484-A924748CD15A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>algo_yuki</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>89FDBEDD-526D-4078-9EB0-943AB979531C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FlyOntheWall2</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E10AE829-E4F3-4DC4-A2A4-10602BBB042A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxOsc</string>
+		</dict>
+	</array>
+</dict>
+</plist>

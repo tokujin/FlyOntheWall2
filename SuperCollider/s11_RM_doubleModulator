@@ -1,0 +1,8 @@
+// RM変調3 - 2つのModulator
+SynthDef.new("test-rm",{
+	var car, mod1, mod2, rm;
+	car = SinOsc.ar(440, 0, 0.5);
+	mod1 = SinOsc.ar(MouseX.kr(1, 4000, 1), 0, 1.0);
+	mod2 = SinOsc.ar([6.1,7.9].reciprocal);
+	rm = car * (mod1 * mod2);
+	Out.ar(0, rm); }).play;

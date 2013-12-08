@@ -8,6 +8,7 @@ void testApp::setup(){
     ofBackground(100);
     ofEnableBlendMode(OF_BLENDMODE_ADD);
 
+<<<<<<< HEAD
     //Load Image
     particleImage.loadImage("particle.png");
 
@@ -15,11 +16,23 @@ void testApp::setup(){
     b.set(ofGetWidth()*3/4, ofGetHeight()*3/4);
     NumPoints = 40;
     
+=======
+    //load image
+    particleImage.loadImage("particle.png");
+
+    //two points
+    a.set(ofGetWidth()/4, ofGetHeight()/4);
+    b.set(ofGetWidth()*3/4, ofGetHeight()*3/4);
+    NumPoints = 40; //Number of Points on the string
+
+    //set points
+>>>>>>> 0ecbe78ba9fbdb74ecc7f1595c3868d57c4f9dcd
     for (int i = 0; i < NumPoints; i++){
         ofVec2f pos = ofVec2f((b-a).x/NumPoints*i,(b-a).y/NumPoints*i);
         pointsOnString.push_back(pos);
     }
     
+<<<<<<< HEAD
     A = 70;
     J = 1.f;
     decay=1;
@@ -29,12 +42,21 @@ void testApp::setup(){
     mus.play();
     mus.setVolume(0.f);
     mus.setLoop(true);
+=======
+    //parameter settings
+    A = 70;
+    decay=1;
+    n = 1;
+    
+    //sound related
+>>>>>>> 0ecbe78ba9fbdb74ecc7f1595c3868d57c4f9dcd
     soundPlay = false;
 
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
+<<<<<<< HEAD
 
     L = ofDist(a.x, a.y, b.x, b.y);
     c = ofVec2f(mouseX, mouseY);
@@ -75,6 +97,44 @@ void testApp::update(){
     }
     cout<<J<<endl;
 
+=======
+    
+    L = ofDist(a.x, a.y, b.x, b.y);  //Distance between point a and b
+    c = ofVec2f(mouseX, mouseY);
+    
+    ofPushMatrix();
+        ofTranslate(a);  //transrate x,y-coordinate to point a
+        decay *= 0.97;  //decay magnitude
+        ofVec2f q=ofVec2f(1,0);  //normal vector
+        float angle=q.angle(b-a);  //get angle of q and (b-a)
+        ofRotateZ(angle);  //rotate x,y-coordinate(around z-axis)
+    
+        for (int i = 1; i < pointsOnString.size(); i++){
+           pointsOnString[i].x = L/NumPoints*i;
+           pointsOnString[i].y = A*sin(n*PI/L*i*L/NumPoints + sigma)*cos(TWO_PI*20/2/L*ofGetElapsedTimef()*250) * decay;  //A: magnitude, n: oscillation more, sigma: phase, when phase=0 standing wave
+        }
+
+    if (minimum_distance_Squared(a, b, c) < 5*5){  //squared of minimum distance
+        if ((c-a).dot(c-a) < L*L/(3*3)) {  //when collision point is near to a
+            n=3;
+            A = 70;
+            decay = 1;
+            sigma = PI/2;
+        }
+        if ((c-a).dot(c-a) > L*L/(3*3) && (c-a).dot(c-a) < L*L*4/9) { //when collision point is in the middle of a and b
+            n=1;
+            decay = 1;
+            sigma = 0;
+        }
+        if( ((c-a).dot(c-a) >  L*L*4/9)){  //when collision point is near to b
+            n=3;
+            decay=1;
+            sigma = PI/2;
+
+        }
+        soundPlay = true;  //play sound
+    }
+>>>>>>> 0ecbe78ba9fbdb74ecc7f1595c3868d57c4f9dcd
     ofPopMatrix();
 }
 
@@ -96,10 +156,14 @@ void testApp::draw(){
         ofRotateZ(angle);
     
     for (int i = 0; i < pointsOnString.size(); i++){
+<<<<<<< HEAD
 //        ofLine(pointsOnString[i], pointsOnString[i+1]);
         pointsOnString[NumPoints] = ofVec2f(L, 0);
 //        ofCircle(pointsOnString[i], 10);
 //        ofCircle(pointsOnString[NumPoints], 2);
+=======
+        pointsOnString[NumPoints] = ofVec2f(L, 0);
+>>>>>>> 0ecbe78ba9fbdb74ecc7f1595c3868d57c4f9dcd
         particleImage.draw(pointsOnString[i].x -16, pointsOnString[i].y -16);
     }
     

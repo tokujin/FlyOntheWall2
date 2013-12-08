@@ -1,0 +1,21 @@
+// AM + LFNoise
+(
+SynthDef.new("rand-am",{
+	arg freq = 440, amp = 0.5, modFreq = 400;
+	var car, mod1, mod2, rm;
+	car = SinOsc.ar(freq, 0, amp);
+	mod1 = SinOsc.ar(LFNoise1.kr(5.reciprocal, modFreq), pi.rand, 0.5, 0.5);
+	mod2 = SinOsc.ar(LFNoise1.kr([8,7].reciprocal).abs);
+	rm = car * (mod1 * mod2);
+	Out.ar(0, rm); }).add;
+)
+
+(
+Synth("rand-am", ["freq",110, "amp", 0.2, "modFreq", 1200]);
+Synth("rand-am", ["freq",110, "amp", 0.2, "modFreq", 200]);
+Synth("rand-am", ["freq",110, "amp", 0.2, "modFreq", 200]);
+Synth("rand-am", ["freq",110, "amp", 0.2, "modFreq", 100]);
+Synth("rand-am", ["freq",110, "amp", 0.2, "modFreq", 20]);
+)
+
+//something is wrong, but.. cannot find it

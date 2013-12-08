@@ -26,14 +26,24 @@ class testApp : public ofBaseApp{
         ofVec2f a,b,c;
         float L; //Distance
         float A; //magnitude
+<<<<<<< HEAD
         float J; //sound volume
+=======
+>>>>>>> 0ecbe78ba9fbdb74ecc7f1595c3868d57c4f9dcd
         deque<ofVec2f> pointsOnString;
         int NumPoints;
         float decay;
         int n; // viblation mode
+<<<<<<< HEAD
     
         ofImage particleImage;
         bool soundPlay;
     
     ofSoundPlayer mus;
+=======
+        float sigma;
+    
+        ofImage particleImage;
+        bool soundPlay;
+>>>>>>> 0ecbe78ba9fbdb74ecc7f1595c3868d57c4f9dcd
 };

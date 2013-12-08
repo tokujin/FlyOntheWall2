@@ -1,0 +1,7 @@
+//FM基本
+SynthDef.new("test-fm",{
+	arg cfreq = 440, mfreq = 111, index = 200;
+	var car, mod;
+	mod = SinOsc.ar(mfreq, 0, index);
+	car = SinOsc.ar([cfreq, cfreq*1.005] + mod, 0, 0.5);
+	Out.ar(0, car); }).play;
