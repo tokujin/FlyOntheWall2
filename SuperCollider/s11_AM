@@ -1,0 +1,13 @@
+ // AM変調
+SynthDef.new("test-am",{
+	var car, mod, rm;
+	mod = SinOsc.ar(MouseX.kr(1, 4000, 1), 0, 0.5, 0.5);
+	car = SinOsc.ar([440,442], 0, 0.5); rm = car * mod;
+	Out.ar(0, rm); }).play;
+
+SynthDef.new("test-am",{
+	var car, mod1, mod2, rm;
+	car = SinOsc.ar(440, 0, 0.5);
+	mod1 = SinOsc.ar(MouseX.kr(1, 4000, 1), 0, 0.5, 0.5);
+	mod2 = SinOsc.ar([8,7].reciprocal);
+	rm = car * (mod1 * mod2); Out.ar(0, rm); }).play;

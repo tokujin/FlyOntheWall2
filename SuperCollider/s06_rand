@@ -1,0 +1,11 @@
+(
+var num = 8;
+{Mix.arFill(num, {
+	SinOsc.ar([50+1000.rand, 50+1000.rand], pi.rand, 1.0/num)})}.play
+	)
+
+(
+var num = 8;
+{Mix.arFill(num, {
+	SinOsc.ar([ExpRand(50, 8000), ExpRand(50,8000)], pi.rand, 1.0/num)})}.play
+	)

@@ -1,0 +1,12 @@
+// RM変調
+SynthDef.new("test-rm",{
+	var car, mod, rm;
+	mod = SinOsc.ar(880, 0, 1.0);
+	car = SinOsc.ar([440,442], 0, 0.5);
+	rm = car * mod; Out.ar(0, rm); }).play;
+
+// RM変調2 - マウスでModulatorの周波数を変更 SynthDef.new("test-rm",{
+　　var car, mod, rm;
+　　mod = SinOsc.ar(MouseX.kr(1, 4000, 1), 0, 1.0);
+　　car = SinOsc.ar([440,442], 0, 0.5);
+　　rm = car * mod; Out.ar(0, rm); }).play;

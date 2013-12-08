@@ -1,0 +1,7 @@
+//FMマウスで操作
+SynthDef.new("test-fm",{
+	var car, mod;
+	mod = SinOsc.ar(MouseX.kr(1, 1000, 1), 0, MouseY.kr(1, 10000, 1));
+	car = SinOsc.ar([440,442] + mod, 0, 0.5);
+	Out.ar(0, car);
+}).play;

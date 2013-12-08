@@ -1,0 +1,12 @@
+//SynthDefの定義(引数あり)
+SynthDef.new("test-SinOsc", {
+	arg freq = 440, amp = 0.2;
+	Out.ar(0, SinOsc.ar(freq, 0, amp)) }).add;
+//Synthを演奏
+a = Synth("test-SinOsc"); //440Hz
+b = Synth("test-SinOsc", [freq:660]); //660Hz
+c = Synth("test-SinOsc", [freq:880, amp:0.5]); //880Hz, amp:0.5
+a.set("freq", 330); //440Hz -> 330Hz
+b.set("freq", 220, "amp", 0.3); //660Hz -> 220Hz, amp: 0.3
+//終了
+a.free; b.free; c.free;。。
